@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulários em HTML</title>
+</head>
+<body>
+  <main>
+    <h1>Formulário</h1>
+    <hr/>
+    <br/>
+
+    <form action="" style="display: flex; flex-direction: column; gap: 1rem;">
+      <div>
+        <label for="nome"> Nome: </label>
+        <input type="text" name="nome" id="texto">
+      </div>
+      <div>
+         <label for="senha">Senha: </label>
+         <input type="password" id="senha" name="senha">
+      </div>
+      <div>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div>
+        <label for="data"> Data de Nascimento: </label>
+        <input type="date" id="data" name="data">
+      </div>
+      <div>
+        <label for="hora"> Horário: </label>
+        <input type="time" id="hora" name="hora">
+      </div>
+      <div>
+        <label for="num"> Número: </label>
+        <input type="number" id="num" name="num">
+      </div>
+      <div>
+        <label for="arq"> Arquivo: </label>
+        <input type="file" id="arq" name="arq">
+      </div>
+      <div>
+        <label for="url"> Url: </label>
+        <input type="url" id="url" name="url">
+      </div>
+      <div>
+        <label for="cor"> Cor: </label>
+        <input type="color" id="cor" name="cor">
+      </div>
+      <div>
+        <label for="rang"> Range: </label>
+        <input type="range" id="rang" name="rang">
+      </div>
+      <div>
+        <label for="check"> Caixa de Seleção: </label>
+        <input type="checkbox" id="check" name="check">
+      </div>
+      <div>
+        <label for="rad"> Radio: </label>
+        <input type="radio" id="rad" name="rad">
+      </div>
+      <div>
+        <label for="sub"> Submeter: </label>
+        <input type="submit" id="sub" name="sub">
+      </div>
+      <div>
+        <label for="res"> Resetar: </label>
+        <input type="reset" id="res" name="res">
+      </div>
+
+      <textarea name="ta" id="ta" cols="30" rows="10"></textarea>
+
+      <select name="select" id="select">
+        <option value="" disabled selected> Seleciona uma opção... </option>
+        <option value="receita"> Receita </option>
+        <option value="despesa"> Despesa </option>
+        <option value="transferencia"> Transferência </option>
+      </select>
+
+    </form>
+  </main>
+</body>
+</html>
