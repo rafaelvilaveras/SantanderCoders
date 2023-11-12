@@ -1,0 +1,40 @@
+/* Boas práticas indicam para resetar, remover algumas predefinições do CSS do HTML */
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  /* color: blue; */
+  color: #000000; /* Hexadecimal -> de 00 até FF, números: 0 até nove, letras A até F, alterna o tom da cor primária, Vermelho - Verde - Azul, possível usar apenas com 3 casas: #000000 = #000.  */
+
+  background-color: aqua;
+  font-size: 4rem; /* Regula o tamanho da fonte */
+  font-weight: 900; /* Regula o "peso", grossura da fonte, aumenta sempre em 100 */
+  font-style: italic; /* Muda o estilo da fonte */
+  text-decoration: underline; /* Muda a decoração do texto */
+  text-transform: capitalize; /* Mudao comportamento do texto, se vai ser em caixa alta, caixa baixa ou sempre com a primeira letra em caixa alta... */
+  text-align: center; /* Muda a posição do texto em relação ao seu espaço */
+
+}
+
+p {
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: justify;
+  text-indent: 2rem; /* Recuo do parágrafo, funciona apenas na primeira linha. */
+}
+
+/* Você precisa de um " . " para editar uma classe no CSS */
+.bg-div {
+  width: 100%;
+  height: 25rem;
+  background-color: blue;
+  background-image: url(https://i.pinimg.com/736x/3c/58/78/3c5878751af1be01ebd4b173ba9ab389.jpg);
+  background-size: cover; /* Vai ajustar como a imagem se comporta em relação ao seu container. */
+  background-repeat: no-repeat; /* Vai definir as opções de repetição da imagem. */
+  background-position: center; /* Vai definir a posição da imagem em relação ao espaço disponível */
+  background-attachment: fixed; /* Usado para criar efeitos de paralaxe, define como o background vai se comportar mediante rolamento da página, não funciona em todos navegadores */
+}
