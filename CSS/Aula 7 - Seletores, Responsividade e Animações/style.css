@@ -1,0 +1,107 @@
+/* Boas práticas indicam para resetar, remover algumas predefinições do CSS do HTML */
+*{
+  margin: 0;
+  padding: 0;
+  /* border: 0;  */
+  box-sizing: border-box;
+}
+
+/*
+  [data-attributes], informações extrar que um componente pode carregar, ele é definido como data-exemplo="exemplo" e para ser acessado no CSS você precisa declarar ele como [data-exemplo="exemplo"] { ... };
+
+  @media print, onde vai ficar as configurações da página para quando for acionado a opção de print, ctrl + p;
+
+  @media screen, você coloca regras para que algo aconteça, uma configuração de estilo, quando você chega na regra alcançada;
+
+  display, ele é o responsável pela visibilidade de um componente da página;
+
+  transform, modifica o componente, possui diversas opções para tal como scale, rotate e etc. O VSCode mostra essas opções;
+
+  transition, define a velocidade e a suavidade da animação / modificação feita no container;
+
+  @keyframes, @keyframes animação é uma tag de animação que pode ser usada em outros componentes;
+
+  animation, é o que vai chamar a animação que foi criada anteriormente, sintaxe: animation: animação transição duração;
+
+  animation-direction, vai definir o comportamento da animação, alternate cria um loop que vai de 0 -> 100 e depois de 100 -> 0 (0 seria o inicio da animação e 100 o final);
+
+*/
+
+:root {
+  font-size: 62.5%; /* 16px */
+}
+
+
+main {
+  padding: 2rem;
+}
+
+h1 {
+  color: #000000;
+  text-align: center; 
+}
+
+p {
+  text-indent: 2rem;
+}
+
+div {
+  font-size: 2rem;
+}
+
+table {
+  font-size: 3rem;
+}
+
+td {
+  padding: 0.5rem;
+}
+
+#item-table {
+  /* display: none; */
+}
+
+[data-teste ="item2"] {
+  background-color: aquamarine;
+}
+
+.test-button {
+  width: 10rem;
+  height: 3rem;
+  margin-top: 1rem;
+  background-color: aqua;
+  border: none;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+
+}
+
+.test-button:hover {
+  transform: scale(1.2);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.35);
+    opacity: 0.6;
+  }
+}
+
+[data-button-animated="a-button"] {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  border: none;
+  padding: 1rem;
+
+  background-color: aqua;
+  color: white;
+
+  animation: pulse 2s infinite;
+  /* animation-fill-mode: forwards; */
+  animation-direction: alternate;
+}

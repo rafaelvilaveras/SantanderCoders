@@ -1,0 +1,80 @@
+/* Boas práticas indicam para resetar, remover algumas predefinições do CSS do HTML */
+*{
+  margin: 0;
+  padding: 0;
+  border: 0; 
+  box-sizing: border-box;
+}
+
+/*
+  flex-direction, a disposição dos elementos dentro de um elemento "pai" flex;
+
+  flex-flow, junção do flex-wrap e flex-direction;
+
+  flex-basis, define um tamanho mínimo para os elementos do container;
+
+  flex, define o espaço a ser priorizado pelos elementos, o padrão é que todos são iguais 1 - 1, se você definir flex 2 para um dos elementos ele terá prioridade de espaço em relação aos demais, caso ele esteja sozinho ele vai ocupar todo o espaço;
+
+  justify-items, ;
+
+  justify-content, modifica o posicionamento dos elementos filho do container flex row horizontalmente e verticalmente em um container flex column;
+
+  align-items, alinha os elementos "filho" na vertical;
+
+  align-content, ;
+
+  order, muda o posicionamento de um elemento do container;
+*/
+
+:root {
+  font-size: 62.5%; /* 16px */
+}
+
+
+main {
+  padding: 2rem;
+}
+
+h1 {
+  color: #000000;
+  text-align: center; 
+}
+
+p {
+  text-indent: 2rem;
+}
+
+div {
+  font-size: 2rem;
+}
+
+.boxes {
+  /* height: calc(100vh - (7 * 2rem)); */
+  height: 100vh;
+  position: relative;
+
+  display: flex;
+  /* flex-direction: column;
+  flex-wrap: wrap; */
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: center;
+  gap: 2rem 1rem;
+}
+
+.box {
+  min-width: 20rem;
+  min-height: 10rem;
+  background-color: blue;
+  color: white;
+  border: 4px solid red;
+  display: inline-block;
+  padding: 1.5rem;
+  /* margin: 0.5rem; */
+  /* flex-basis: 30%; */
+  flex: 1;
+}
+
+.box:nth-child(3) {
+  order: 0;
+}

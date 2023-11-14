@@ -1,0 +1,75 @@
+/* Boas práticas indicam para resetar, remover algumas predefinições do CSS do HTML */
+*{
+  margin: 0;
+  padding: 0;
+  /* border: 0; */ /* Removi para aparecer a formatação básica das tables */
+  box-sizing: border-box;
+}
+
+/* 
+  :first-child, é uma pseudoclasse para que altera apenas o primeiro "filho" ou elemento de um componente;
+
+  :nth-child(n), pseudoclasse que altera os elementos apontados a partir de n (n começa em 0, o primeiro "filho" / elemento)(a semântica para alternancia entre elementos "filho" é colocar um número ao lado do n, ex: 2n)(a semântica para alternar onde começa a contar a configuração aplicada é n + número, ex: n + 1, começa a partir do segundo elemento);
+
+
+*/
+
+:root {
+  font-size: 100%; /* 16px */
+}
+
+h1 {
+  color: #000000;
+  text-align: center; 
+}
+
+p {
+  text-indent: 2rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+main ul, ol {
+  padding: 2rem;
+}
+
+main th, td {
+  padding: 0.5rem;
+}
+
+table thead tr:first-child {
+  background-color: steelblue;
+  color: white;
+}
+
+table tbody tr:nth-child(2n) {
+  background-color: lightgray;
+  color: white;
+}
+
+table tbody tr:nth-child(2n + 1) {
+  background-color: gray;
+  color: white;
+}
+
+ul {
+  list-style-type: square;
+}
+
+ol {
+  list-style: upper-roman;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+  border: 1px solid red;
+  display: inline-block;
+}
+
+img {
+  width: 200px;
+  height: 100px;
+}
