@@ -1,0 +1,67 @@
+/* Boas práticas indicam para resetar, remover algumas predefinições do CSS do HTML */
+*{
+  margin: 0;
+  padding: 0;
+  border: 0; 
+  box-sizing: border-box;
+}
+
+/*
+  grid, funciona como um flex, só que a customização é mais fácil para linhas e colunas, é possível usar todas as propriedades vinculadas ao flexbox em grid;
+
+  grid-template-( columns ou rows), é o que vai definir a disposição das colunas / linhas de um componente grid, a quantidade a ser ocupada e a disposição dos itens, por exemplo: "grid-template-columns: 1fr 3fr 1fr;", no exemplo temos 3 colunas com a do meio ocupando mais espaço em uma proporção de 3 unidades de espaço;
+
+  fr, é uma unidade de espaço em um grid, * * *, cada asterisco representa uma unidade de espaço ou 1fr, no exemplo a disposição é 1fr 1fr 1fr, agora ele pode ficar assim: * ** *, nesse segundo exemplo temos uma disposição 
+  1fr 2fr 1fr;
+
+  repeat(n, x), repeat é uma propriedade que pode ser usada no grid para repetir medidas, "n" é o número de vezes que o item vai ser repetido e "x" é o valor a ser repetido
+
+  grid-template-areas, ele vai definir o comportamento tanto das colunas quanto das linhas dentro de um componente grid, basicamente uma matriz, você precisa do grid-area definido em cada item que vai ser afetado, a disposição dos itens deve ser respeitado de forma consistente, se tiver 4 colunas em um, em todos deverá ter, caso não queira um item ocupando espaço você pode escrever um ".";
+  
+  grid-area, é o identificador do objeto a ser modificado em um grid-template-areas;
+*/
+
+:root {
+  font-size: 62.5%; /* 16px */
+}
+
+
+main {
+  padding: 2rem;
+}
+
+h1 {
+  color: #000000;
+  text-align: center; 
+}
+
+p {
+  text-indent: 2rem;
+}
+
+div {
+  font-size: 2rem;
+}
+
+.boxes {
+  /* height: calc(100vh - (7 * 2rem)); */
+  height: 100vh;
+  position: relative;
+
+  display: grid;
+  justify-content: flex-start;
+  gap: 2rem 1rem;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.box {
+  min-width: 20rem;
+  min-height: 10rem;
+  background-color: blue;
+  color: white;
+  border: 4px solid red;
+  display: inline-block;
+  padding: 1.5rem;
+}
