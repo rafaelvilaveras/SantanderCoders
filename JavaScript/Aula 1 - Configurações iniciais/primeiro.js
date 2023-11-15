@@ -1,0 +1,5 @@
+ console.log('Hello World!');
+
+ console.log('Bem-vindo ao curso de JavaScript');
+ 
+//  Comentários são feiots assim em JS!!
