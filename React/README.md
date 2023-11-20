@@ -1,7 +1,6 @@
-# Anotações da aula Santander Coders - React
+# Anotações do curso de ReactHooks do WevDevSimplified
 
-## Aula 3 - Componentes e props
+## Aula 1 - UseState
 
-  As funções dos componentes devem ser nomeados em PaslcalCase, a primeira letra sempre é maiúscula, App() por exemplo;
 
   

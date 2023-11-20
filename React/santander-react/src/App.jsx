@@ -1,26 +1,21 @@
-import './App.css'
-import MeuContador from './components/MeuContador';
-import MinhaLista from './components/MinhaLista';
-import Tarefas from './components/Tarefas';
+import { HookContainer, MainContainer, NavContainer } from "./styles/containers"
+import GlobalStyle from "./styles/global"
 
 function App() {
 
   return (
     <>
-      <MinhaLista/>
-      <Tarefas/>
+      <GlobalStyle/>
+      <NavContainer>
+        
+      </NavContainer>
+      <MainContainer>
+        <HookContainer>
+          <h1>teste</h1>
+        </HookContainer>
+      </MainContainer>
     </>
   )
-}
-
-
-
-function MeuBotao(props) {
-  console.log(props);
-
-  return (
-    <button>{props.conteudo}</button>
-  );
 }
 
 export default App
