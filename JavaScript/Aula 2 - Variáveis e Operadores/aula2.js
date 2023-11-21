@@ -34,4 +34,4 @@ var variavel = 30;
 
 const constante = 100;
 
-// cons não muda  o valor ao longo do código, é mais recomendado que use const no lugar de variáveis;
+// const não muda  o valor ao longo do código, é mais recomendado que use const no lugar de variáveis;
