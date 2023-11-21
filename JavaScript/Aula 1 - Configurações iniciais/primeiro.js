@@ -2,4 +2,4 @@
 
  console.log('Bem-vindo ao curso de JavaScript');
  
-//  Comentários são feiots assim em JS!!
+//  Comentários são feitos assim em JS!!
